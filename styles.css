@@ -1,0 +1,206 @@
+/*---DEFAULT STYLES---*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color: rgb(243, 230, 232);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgba(243,159,163,1) 0%, rgba(245,184,187,1) 50%, rgba(243,159,163,1) 100%);    
+    margin: 2rem auto;
+    line-height: 1.5;
+    padding: 1rem 1rem;
+}
+
+h1{
+    color:rgb(17, 17, 17);
+    font-weight: bold;
+}
+
+h2{
+    text-align: left;
+    padding: 2rem 1rem;
+    text-decoration: underline;
+    font-size: 15px;
+    color:rgb(17, 17, 17);
+}
+
+button{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 15px;
+    color: white;
+    padding: .7rem 1rem;
+    margin: 0rem 0rem 1rem 0rem;
+    background-color: rgb(17, 17, 17);
+    width: 100%;
+    border:rgb(17, 17, 17);
+    border-radius: 100px;
+}
+
+button:hover{
+    background-color: rgb(243, 94, 94);
+    cursor:pointer;
+}
+
+.flex-reviews{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+/*---PRODUCT CARD---*/
+.card{
+    color:rgb(17, 17, 17);
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 3px 8px 0 rgb(17, 17, 17);
+}
+
+.product{
+    background: white;
+}
+
+.product-rating{
+   color:rgb(17, 17, 17);
+   display: flex;
+   padding: 0rem 2rem;
+}
+
+.product-rating p{
+    font-weight: bold;
+}
+
+.product-rating p{
+    padding: 0rem .5rem;
+    font-size: 1rem;
+}
+
+.product-description{
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+/*---WRITE A REVIEW BUTTON---*/
+.review-button{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0rem 2rem;
+}
+
+/*---POP-UP WINDOW---*/
+.popup{
+    display: none;
+
+}
+
+.user-input{
+    background-color: white;
+}
+
+.user-review{
+    text-align: left;    
+    margin: 0rem 2rem;
+    padding: 1rem 0rem;
+    color:rgb(17, 17, 17);
+}
+
+.user-review p{padding: .3rem 0rem;
+    padding: 0rem .1rem .5rem .1rem;
+    color:rgb(17, 17, 17);
+}
+
+.user-review-info{
+    padding: 0rem;
+    width: 100%;
+}
+
+.user-review-info input{
+    width: 100%;
+}
+
+.select-star{
+    padding-top: 0.2rem;
+}
+
+#name{
+    padding: .3rem;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#comment{
+    width: 100%;
+    padding: .3rem;
+    font-size: .9rem;
+    font-family: 'Montserrat', sans-serif;
+    height: 90px;
+}
+
+/*---RESPONSIVE STARS ON REVIEW FORM---*/
+.rating{
+    display: flex;
+    flex-direction: row-reverse;
+    color: rgb(206, 203, 194);
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+
+.rating > input{
+    display: none;
+}
+
+.rating > label{
+    cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating > input:checked ~ label ~ label {
+    color: rgb(255, 196, 0);
+}
+
+.rating > input:not(:checked) ~ label:hover,
+.rating > input:not(:checked) ~ label:hover ~ label {
+    color: rgb(255, 196, 0);
+}
+
+/*---APPENDED REVIEWS---*/
+.past-reviews{
+    background:white;
+    color: white;
+    text-align: left;
+    font-weight: normal;
+}
+
+.past-reviews p{
+    padding: .5rem 0rem 0rem 0rem;
+}
+
+.review{
+    background: rgb(221, 101, 101);
+    padding: 2rem 2rem;
+}
+
+.review:nth-child(odd){
+    background: rgb(91, 73, 92);
+    padding: 2rem 2rem;
+}
+
+.review-title{
+    display: flex;
+    justify-content:space-between;
+}
+
+.review-rating p{
+    font-size: 1.5rem
+}
+
+.date{
+    text-decoration: underline;
+    font-size: .9rem;
+}

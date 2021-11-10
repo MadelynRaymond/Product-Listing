@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="./product.js"></script>
+</head>
+<body>
+    <div class="card" id="card">
+        <div class="product">
+            <h2>women's shoes</h2>
+            <div class="product-img">
+                <img src="airjordan1.png" alt="pink shoe">
+            </div>
+            <h1>Air Jordan 1 Zoom Air Comfort</h1>
+            <div class="product-rating">
+                <div class="product-stars" id="product-stars">
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div> 
+                <p id="review-count">0 review(s)</p>
+            </div>
+            <div class="product-description">
+                <p>The Women's Air Jordan 1 Zoom Air Comfort has returned with an all-new look and color option! Redesigned to be more comfortable and breathable than ever before, this beautiful terracotta shoe is perfect for summer. </p>
+            </div>
+            <div class="review-button">
+                <button class="open-button" onClick="openWindow()">Write a Review</button>
+            </div>
+        </div>
+        <div class="flex-reviews"> 
+            <div class="past-reviews" id="review-list">
+        </div>
+        <div class="user-input popup" id="input-review">
+            <div class="user-review">
+                <p style="text-align: center;">Please provide the following details:</p>
+                <form onsubmit="return false">
+                    <div class="user-review-info">
+                        <label for="name">Name:</label><br>
+                        <input id="name" type="text">
+                    </div>
+                    <div class="user-review-info comment">
+                        <label for="comment">Comment:</label><br>
+                        <textarea id="comment" rows="1" cols="100" type="text"></textarea>
+                    </div>
+                    <div class="select-star">Your rating:</div>
+                    <div class="rating"> 
+                        <input type="radio" id="5" name="stars">
+                        <label for="5">★</label>
+                        <input type="radio" id="4" name="stars">
+                        <label for="4">★</label>
+                        <input type="radio" id="3" name="stars">
+                        <label for="3">★</label>
+                        <input type="radio" id="2" name="stars">
+                        <label for="2">★</label>
+                        <input type="radio" id="1" name="stars">
+                        <label for="1">★</label>
+                    </div>
+                    <button type="submit" onClick="appendReview()" id="submit">Submit</button>
+                    <button type="submit" onClick="closeWindow()">Exit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
